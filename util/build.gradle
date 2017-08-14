@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven'
+}
+
+ext {
+    springBatchVersion = '3.0.7.RELEASE'
+    springBootVersion = '1.5.3.RELEASE'
+}
+
+List springframework = [
+        "org.springframework:spring-beans:${springVersion}",
+        "org.springframework:spring-web:${springVersion}"
+]
+
+dependencies {
+    compile springframework
+    compile "org.apache.httpcomponents:httpclient:${httpcomponentHttpClientVersion}"
+    compile "org.apache.httpcomponents:httpcore:${httpcomponentHttpCoreVersion}"
+
+    compile ("org.springframework.data:spring-data-redis:1.7.2.RELEASE"){
+        exclude group: 'org.springframework', module: 'spring-core'
+        exclude group: 'org.springframework', module: 'spring-context-support'
+    }
+
+    compileOnly "org.springframework.batch:spring-batch-infrastructure:${springBatchVersion}"
+    compileOnly "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compileOnly "org.hibernate:hibernate-core:${hibernateVersion}"
+    compileOnly "com.querydsl:querydsl-core:${queryDslVersion}"
+    compileOnly "com.querydsl:querydsl-jpa:${queryDslVersion}"
+    compileOnly "org.springframework.data:spring-data-jpa:${springDataJpaVersion}"
+    compileOnly 'javax.servlet:javax.servlet-api:3.0.1'
+    testCompile 'javax.servlet:javax.servlet-api:3.0.1'
+    testCompile 'org.assertj:assertj-core:1.0.0'
+}
+
+
+bootRepackage {
+    enabled = false
+}

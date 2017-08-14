@@ -1,0 +1,82 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.3.RELEASE'
+        logbackVersion = '1.1.8'
+        bootAdminVersion = '1.4.1'
+        lombokVersion = '1.16.16'
+        aspectjVersion = '1.8.9'
+
+        commonDomainVersion = '0.0.8-RELEASE'
+        hibernateVersion = '5.2.10.Final'
+        hiernateValitorVersion = '5.4.1.Final'
+        springVersion = "4.3.8.RELEASE"
+        springDataJpaVersion = "1.11.3.RELEASE"
+        queryDslVersion = "4.1.4"
+        jacksonCodehausVersion = "1.9.13"
+        jacksonVersion = "2.8.8"
+        servletVersion = "3.0.1"
+
+        javaLanguageLevel = '1.8'
+
+        httpcomponentHttpClientVersion = '4.5.2'
+        httpcomponentHttpCoreVersion = '4.4.4'
+        p6spyVersion = "3.0.0"
+
+        pojoTesterVersion = "0.7.5"
+
+    }
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.5"
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+ext['spring.version'] = "${springVersion}"
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+
+    configurations {
+        all*.exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+        all*.exclude group: 'log4j', module: 'log4j'
+        all*.exclude group: 'org.apache.logging.log4j'
+    }
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+
+    project.group = 'org.uhafactory.util'
+    project.version = '0.1.7.RELEASE'
+
+    dependencies {
+        compile "org.projectlombok:lombok:${lombokVersion}"
+        compile "ch.qos.logback:logback-classic:${logbackVersion}"
+        compile "ch.qos.logback:logback-core:${logbackVersion}"
+        compile 'org.slf4j:slf4j-api:1.7.21'
+
+        compile group: 'commons-io', name: 'commons-io', version: '2.5'
+        compile group: 'org.reflections', name: 'reflections', version: '0.9.10'
+        compile group: 'org.apache.commons', name: 'commons-vfs2', version: '2.1'
+
+        testCompile('junit:junit:4.12')
+        testCompile('org.mockito:mockito-all:1.8.4')
+
+    }
+}
