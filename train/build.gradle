@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven'
+}
+
+dependencies {
+    compile project(':util')
+}
+
+
+bootRepackage {
+    enabled = false
+}
