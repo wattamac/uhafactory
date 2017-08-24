@@ -1,11 +1,10 @@
 package org.uhafactory.paging;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.Test;
 
-import static org.assertj.core.api.Java6Assertions.assertThat;
-
 /**
- * Created by lineplus on 2017. 5. 1..
  */
 public class OneBasedPagedRequestTest {
 

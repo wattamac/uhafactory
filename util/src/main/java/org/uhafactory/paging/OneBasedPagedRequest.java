@@ -10,7 +10,6 @@ import org.springframework.util.Assert;
 import java.io.Serializable;
 
 /**
- * Created by lineplus on 2017. 5. 1..
  */
 @Getter
 @Setter

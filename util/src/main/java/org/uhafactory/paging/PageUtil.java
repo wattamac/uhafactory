@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.support.Querydsl;
 import java.util.List;
 
 /**
- * Created by lineplus on 2016. 7. 7..
  */
 public class PageUtil {
     public static <T> Page<T> getPagedResult(Querydsl querydsl, JPQLQuery query, Pageable pageable) {

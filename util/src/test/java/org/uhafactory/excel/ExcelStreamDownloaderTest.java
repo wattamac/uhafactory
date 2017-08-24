@@ -12,7 +12,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 /**
- * Created by lineplus on 2017. 5. 18..
  */
 public class ExcelStreamDownloaderTest {
     @Test

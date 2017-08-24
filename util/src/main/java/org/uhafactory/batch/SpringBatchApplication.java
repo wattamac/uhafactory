@@ -15,7 +15,6 @@ import org.springframework.util.StringUtils;
 import lombok.Setter;
 
 /**
- * Created by lineplus on 2017. 4. 25..
  */
 @SuppressWarnings("rawtypes")
 public class SpringBatchApplication {

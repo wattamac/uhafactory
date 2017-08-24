@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.support.Querydsl;
 import javax.persistence.Query;
 
 /**
- * Created by lineplus on 2017. 8. 23..
  */
 public abstract class AbstractQueryDslQueryProvider extends AbstractJpaQueryProvider {
     @Override

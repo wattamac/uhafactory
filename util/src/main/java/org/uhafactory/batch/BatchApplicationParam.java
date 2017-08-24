@@ -14,7 +14,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Created by lineplus on 2017. 4. 25..
  */
 @Getter
 @Setter

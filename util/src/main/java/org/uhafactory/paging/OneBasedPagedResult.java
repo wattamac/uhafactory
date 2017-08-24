@@ -10,7 +10,6 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by lineplus on 2017. 5. 1..
  */
 @Getter
 @Setter

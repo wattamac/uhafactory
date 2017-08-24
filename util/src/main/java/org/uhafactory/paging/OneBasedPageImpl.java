@@ -6,7 +6,6 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 /**
- * Created by lineplus on 2017. 5. 16..
  */
 public class OneBasedPageImpl<T> extends PageImpl<T> {
     public OneBasedPageImpl(List<T> content, Pageable pageable, long total) {

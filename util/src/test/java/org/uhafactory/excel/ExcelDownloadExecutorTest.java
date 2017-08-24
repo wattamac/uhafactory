@@ -15,7 +15,6 @@ import static org.mockito.Matchers.anyLong;
 import static org.mockito.Mockito.*;
 
 /**
- * Created by lineplus on 2017. 5. 18..
  */
 public class ExcelDownloadExecutorTest {
 

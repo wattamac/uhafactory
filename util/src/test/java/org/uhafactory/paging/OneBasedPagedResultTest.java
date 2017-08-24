@@ -1,15 +1,15 @@
 package org.uhafactory.paging;
 
-import com.google.common.collect.Lists;
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
-import static org.assertj.core.api.Java6Assertions.assertThat;
+import org.junit.Test;
+
+import com.google.common.collect.Lists;
 
 
 /**
- * Created by lineplus on 2017. 5. 1..
  */
 public class OneBasedPagedResultTest {
 

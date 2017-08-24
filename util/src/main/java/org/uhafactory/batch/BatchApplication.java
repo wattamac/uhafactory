@@ -17,7 +17,6 @@ import org.springframework.context.annotation.Import;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Created by lineplus on 2017. 4. 24..
  */
 @Slf4j
 @Import({BatchApplicationConfiguration.class})
