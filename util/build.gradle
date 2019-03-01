@@ -27,7 +27,7 @@ dependencies {
     compile "org.springframework.batch:spring-batch-infrastructure:${springBatchVersion}"
     compile 'org.springframework.boot:spring-boot-starter-batch'
     compileOnly "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    compileOnly "org.hibernate:hibernate-core:${hibernateVersion}"
+    compile "org.hibernate:hibernate-core:${hibernateVersion}"
     compileOnly "com.querydsl:querydsl-core:${queryDslVersion}"
     compileOnly "com.querydsl:querydsl-jpa:${queryDslVersion}"
     compileOnly "org.springframework.data:spring-data-jpa:${springDataJpaVersion}"

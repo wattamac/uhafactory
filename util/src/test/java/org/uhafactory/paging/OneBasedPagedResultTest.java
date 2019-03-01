@@ -1,12 +1,11 @@
 package org.uhafactory.paging;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import com.google.common.collect.Lists;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import org.junit.Test;
-
-import com.google.common.collect.Lists;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**

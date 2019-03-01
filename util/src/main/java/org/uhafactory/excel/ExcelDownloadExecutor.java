@@ -1,8 +1,8 @@
 package org.uhafactory.excel;
 
-import com.linecorp.ocp.support.paging.OneBasedPagedRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.uhafactory.paging.OneBasedPagedRequest;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

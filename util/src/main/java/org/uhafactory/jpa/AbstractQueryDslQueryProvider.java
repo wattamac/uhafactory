@@ -1,4 +1,4 @@
-package org.uhafactory.batch;
+package org.uhafactory.jpa;
 
 import com.querydsl.core.types.dsl.PathBuilder;
 import com.querydsl.core.types.dsl.PathBuilderFactory;

@@ -24,7 +24,7 @@ public class BatchApplication {
 	private static SystemExiter EXITER = new JvmSystemExiter();
 	private static ExitCodeMapper exitCodeMapper = new SimpleJvmExitCodeMapper();
 
-	public static void main(String[] args) throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, ParseException, ClassNotFoundException {
+	public static void main(String[] args) {
 		long startTime = System.currentTimeMillis();
 
 		log.info("start batch application args = {}", ArrayUtils.toString(args));

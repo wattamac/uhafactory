@@ -1,7 +1,7 @@
 package org.uhafactory.excel;
 
 import com.google.common.collect.Lists;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.uhafactory.paging.OneBasedPageImpl;

@@ -1,24 +1,28 @@
 package org.uhafactory.paging;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  */
 public class OneBasedPagedRequestTest {
 
-    @Test(expected = IllegalArgumentException.class)
-    public void test_pageNumberInvalid(){
-        new OneBasedPagedRequest(0, 1);
-    }
-    @Test(expected = IllegalArgumentException.class)
-    public void test_pageSizeInvalid(){
-        new OneBasedPagedRequest(1, -1);
+    @Test
+    public void test_pageNumberInvalid() {
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> new OneBasedPagedRequest(0, 1));
     }
 
     @Test
-    public void testGetOffSet(){
+    public void test_pageSizeInvalid() {
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> new OneBasedPagedRequest(1, -1));
+    }
+
+    @Test
+    public void testGetOffSet() {
         OneBasedPagedRequest pagedRequest = new OneBasedPagedRequest(1, 10);
         assertThat(pagedRequest.getOffset()).isEqualTo(0);
 
